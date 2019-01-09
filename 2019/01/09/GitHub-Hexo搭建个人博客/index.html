@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="December&#39;s Blog">
 <meta property="og:description" content="前言很早之前就想过以博客的形式来记录自己的学习历程，最开始学习C语言的时候也在CSDN上写过一段时间的学习笔记。后来想过去搭建一个个人网站方便保存自己的学习笔记，但是一直没有去上手学习相关的东西。最近尝试过一些方法，但最终以GitHub+Hexo的方式实现了我的个人博客雏形。我的第一篇笔记，就记录这次搭建个人博客的全过程。 为什么应该坚持写博客？引自知乎：为什么你要写博客？—陈素封 本人博客地址：">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-09T06:33:20.315Z">
+<meta property="og:updated_time" content="2019-01-09T07:57:50.804Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="GitHub+Hexo搭建个人博客全纪录">
 <meta name="twitter:description" content="前言很早之前就想过以博客的形式来记录自己的学习历程，最开始学习C语言的时候也在CSDN上写过一段时间的学习笔记。后来想过去搭建一个个人网站方便保存自己的学习笔记，但是一直没有去上手学习相关的东西。最近尝试过一些方法，但最终以GitHub+Hexo的方式实现了我的个人博客雏形。我的第一篇笔记，就记录这次搭建个人博客的全过程。 为什么应该坚持写博客？引自知乎：为什么你要写博客？—陈素封 本人博客地址：">
@@ -336,7 +336,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  343
+                  914
                 </span>
               
 
@@ -352,7 +352,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  3
                 </span>
               
             </div>
@@ -376,18 +376,26 @@
         <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>很早之前就想过以博客的形式来记录自己的学习历程，最开始学习C语言的时候也在CSDN上写过一段时间的学习笔记。后来想过去搭建一个个人网站方便保存自己的学习笔记，但是一直没有去上手学习相关的东西。最近尝试过一些方法，但最终以GitHub+Hexo的方式实现了我的个人博客雏形。我的第一篇笔记，就记录这次搭建个人博客的全过程。</p>
 <h2 id="为什么应该坚持写博客？"><a href="#为什么应该坚持写博客？" class="headerlink" title="为什么应该坚持写博客？"></a>为什么应该坚持写博客？</h2><p><a href="https://zhuanlan.zhihu.com/p/19743861?columnSlug=cnfeat" target="_blank" rel="noopener">引自知乎：为什么你要写博客？—陈素封</a></p>
 <h2 id="本人博客地址：December’s-Blog"><a href="#本人博客地址：December’s-Blog" class="headerlink" title="本人博客地址：December’s Blog"></a>本人博客地址：<a href="http://shieryue.xyz">December’s Blog</a></h2><h1 id="搭建流程"><a href="#搭建流程" class="headerlink" title="搭建流程"></a>搭建流程</h1><ul>
-<li>获得个人网站域名</li>
-<li>GitHub创建个人仓库</li>
+<li>网站域名</li>
 <li>安装Git</li>
+<li>GitHub创建个人仓库</li>
 <li>安装Node.js</li>
 <li>安装Hexo</li>
 <li>推送网站</li>
 <li>绑定域名</li>
 <li>更换主题</li>
 <li>发布文章</li>
-<li>个性化设置</li>
+<li>个性化设置<h2 id="网站域名"><a href="#网站域名" class="headerlink" title="网站域名"></a>网站域名</h2>域名是网站的入口，有常见的com,cn,net,org等后缀，也有小众的xyz,me,io等后缀。在国内注册域名需要备案，而且备案流程也比较繁杂，时间需要一周左右。为了方便我选择在<a href="https://sg.godaddy.com/zh?isc=gennbacn07&amp;currencytype=CNY&amp;utm_source=baidu&amp;utm_medium=cpc&amp;utm_campaign=zh-cn_corp_sem_base_brand_bz&amp;utm_content=adgroup%20-%2020171124&amp;utm_term=12.17%20Title&amp;mkwid=%7Bmediatype%7D0mL0tIum_pcrid_%7Bcreative%7D_pdv__" target="_blank" rel="noopener">GoDaddy</a>注册域名，域名注册后，只是拥有了域名的使用权，无法通过域名直接访问网站。所以需要域名解析，这里参考阿里云的<a href="https://help.aliyun.com/document_detail/29716.html" target="_blank" rel="noopener">域名解析快速入门</a>。<h2 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h2>Git是开源的分布式版本控制系统，用于敏捷高效地处理项目。直接从官网：<a href="https://git-scm.com/download/win" target="_blank" rel="noopener">Git - Downloading Package</a>下载即可。需要了解Git更多的用法，可以参考廖雪峰老师的<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="noopener">Git教程</a>。<h2 id="GitHub创建个人仓库"><a href="#GitHub创建个人仓库" class="headerlink" title="GitHub创建个人仓库"></a>GitHub创建个人仓库</h2>登录到GitHub,如果没有GitHub帐号，使用你的邮箱注册GitHub帐号。点击GitHub中的New repository创建新仓库，仓库名应该为：<a href="http://GitHub帐户名.github.io" target="_blank" rel="noopener">http://GitHub帐户名.github.io</a><h2 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h2>Hexo基于Node.js，直接官网：<a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener">Download | Node.js </a>下载安装即可。安装Node.js会包含环境变量及npm的安装，安装后，检测Node.js是否安装成功，在命令行中输入 node -v ，检测npm是否安装成功，在命令行中输入npm -v ，显示版本号即为安装成功。这里可以使用淘宝镜像，$npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org，这样就可以使用" target="_blank" rel="noopener">https://registry.npm.taobao.org，这样就可以使用</a> cnpm 命令来替代npm</li>
 </ul>
-<h1 id="关于Hexo"><a href="#关于Hexo" class="headerlink" title="关于Hexo"></a>关于Hexo</h1><p>Hexo是一款基于Node.js的快速、 简洁且高效的博客框架。依赖少易于安装使用，是搭建博客的首选框架。Hexo(中文官方网站) 让上百个页面在几秒内瞬间完成渲染。 Hexo支持Github Flavored Markdown的所有功能,甚至可以整合Octopress的大多数插件，并且自己也有用强大的插件系统，可以方便的生成静态网页托管在GitHub和Heroku上。</p>
+<h2 id="关于Hexo"><a href="#关于Hexo" class="headerlink" title="关于Hexo"></a>关于Hexo</h2><p>Hexo是一款基于Node.js的快速、 简洁且高效的博客框架。依赖少易于安装使用，是搭建博客的首选框架。Hexo(中文官方网站) 让上百个页面在几秒内瞬间完成渲染。 Hexo支持Github Flavored Markdown的所有功能,甚至可以整合Octopress的大多数插件，并且自己也有用强大的插件系统，可以方便的生成静态网页托管在GitHub和Heroku上。</p>
+<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>在自己电脑创建一个文件夹，Hexo框架与发布的网页都将在这个文件夹中。创建好后，在该文件夹打开命令行，$cnpm install -g hexo-cli安装Hexo,安装完成后$hexo init blog初始化博客目录。$hexo g,$hexo s后，打开浏览器输入地址:localhost:4000即可在本地浏览器实时预览。</p>
+<h3 id="常见Hexo命令"><a href="#常见Hexo命令" class="headerlink" title="常见Hexo命令"></a>常见Hexo命令</h3><p><em>npm install hexo -g #安装Hexo
+</em>npm update hexo -g #升级<br><em>hexo init #初始化博客
+</em>hexo n “我的博客” #新建文章<br><em>hexo g #生成
+</em>hexo s #启动服务预览<br><em>hexo d #部署
+</em>hexo server #Hexo会监视文件变动并自动更新，无须重启服务器<br><em>hexo server -s #静态模式
+</em>hexo server -p 5000 #更改端口<br><em>hexo server -i 192.168.1.1 #自定义 IP
+</em>hexo clean #清除缓存，网页显示异常可尝试该命令。</p>
 
       
     </div>
@@ -572,7 +580,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么应该坚持写博客？"><span class="nav-number">1.1.</span> <span class="nav-text">为什么应该坚持写博客？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本人博客地址：December’s-Blog"><span class="nav-number">1.2.</span> <span class="nav-text">本人博客地址：December’s Blog</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#搭建流程"><span class="nav-number">2.</span> <span class="nav-text">搭建流程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关于Hexo"><span class="nav-number">3.</span> <span class="nav-text">关于Hexo</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么应该坚持写博客？"><span class="nav-number">1.1.</span> <span class="nav-text">为什么应该坚持写博客？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本人博客地址：December’s-Blog"><span class="nav-number">1.2.</span> <span class="nav-text">本人博客地址：December’s Blog</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#搭建流程"><span class="nav-number">2.</span> <span class="nav-text">搭建流程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#网站域名"><span class="nav-number">2.1.</span> <span class="nav-text">网站域名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装git"><span class="nav-number">2.2.</span> <span class="nav-text">安装git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GitHub创建个人仓库"><span class="nav-number">2.3.</span> <span class="nav-text">GitHub创建个人仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Node-js"><span class="nav-number">2.4.</span> <span class="nav-text">安装Node.js</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于Hexo"><span class="nav-number">2.5.</span> <span class="nav-text">关于Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Hexo"><span class="nav-number">2.6.</span> <span class="nav-text">安装Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#常见Hexo命令"><span class="nav-number">2.6.1.</span> <span class="nav-text">常见Hexo命令</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
