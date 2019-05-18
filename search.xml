@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[经典算法系列之水仙花数]]></title>
+    <url>%2F2019%2F05%2F18%2F%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95%E7%B3%BB%E5%88%97%E4%B9%8B%E6%B0%B4%E4%BB%99%E8%8A%B1%E6%95%B0%2F</url>
+    <content type="text"><![CDATA[问题打印出100到999所有的水仙花数,所谓水仙花数是指一个三位数，其各位数字立方和等于该数本身。例如：153是一个“水仙花数”，因为153=1的三次方＋5的三次方＋3的三次方。 方法利用for循环控制100-999个数，每个数分解出个位，十位，百位。 代码` #include &lt;stdio.h&gt; int main() { int num,sum = 0; int i,j,k; for(num = 100; num &lt;= 999; num++) { i = num / 100; //取百位 j = num / 10 % 10; //取十位 k = num %10; //取个位 sum = i * i * i + j * j * j + k * k * k; if(num == sum) //判断各位数字的3次方之和是否等于原数字 printf(&quot;数字%d为水仙花数\n&quot;,num); } return 0; }]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[vue.js开发环境配置笔记]]></title>
     <url>%2F2019%2F05%2F14%2Fvue-js%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E7%AC%94%E8%AE%B0%2F</url>
     <content type="text"><![CDATA[安装nodejshttp://www.runoob.com/nodejs/nodejs-install-setup.html 基于node.js,利用淘宝npm镜像安装相关依赖在cmd里直接输入：npm install -g cnpm --registry=https://registry.npm.taobao.org，回车，等待安装… 安装全局vue-cli脚手架,用于帮助搭建所需的模板框架在cmd里 1)输入：cnpm install -g vue-cli，回车，等待安装…2).输入：vue，回车，若出现vue信息说明表示成功 创建项目在cmd里输入：vue init webpack vue_test(项目文件夹名)，回车 安装依赖在cmd里 1).输入：cd vue_test（项目名），回车，进入到具体项目文件夹2).输入：cnpm install，回车，等待一小会儿 测试环境是否搭建成功方法1：在cmd里输入：cnpm run dev 方法2：在浏览里输入：localhost:8080(默认端口为8080)]]></content>
