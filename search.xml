@@ -1,6 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[经典算法系列之猴子吃桃]]></title>
+    <url>%2F2019%2F05%2F28%2F%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95%E7%B3%BB%E5%88%97%E4%B9%8B%E7%8C%B4%E5%AD%90%E5%90%83%E6%A1%83%2F</url>
+    <content type="text"><![CDATA[问题一只猴子摘了N个桃子第一天吃了一半又多吃了一个,第二天又吃了余下的一半又多吃了一个,到第十天的时候发现还有一个 代码1234567891011#include &lt;stdio.h&gt;main() &#123; int i,s,n=1; for(i=1;i&lt;10;i++) &#123; s=(n+1)*2 n=s; &#125; printf(“第一天共摘了%d个桃\n”,s); &#125;]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[经典算法系列之小球反弹]]></title>
+    <url>%2F2019%2F05%2F27%2F%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95%E7%B3%BB%E5%88%97%E4%B9%8B%E5%B0%8F%E7%90%83%E5%8F%8D%E5%BC%B9%2F</url>
+    <content type="text"><![CDATA[问题一球从100米高度自由落下，每次落地后反跳回原高度的一半；再落下，求它在第10次落地时，共经过多少米？第10次反弹多高？ 代码12345678910111213#include &lt;stdio.h&gt;main() &#123; float sn=100.0,hn=sn/2; int n; for(n=2;n&lt;=10;n++) &#123; sn=sn+2*hn;/第n次落地时共经过的米数/ hn=hn/2; /第n次反跳高度/ &#125; printf(“the total of road is %f\n”,sn); printf(“the tenth is %f meter\n”,hn); &#125;]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[经典算法系列之找完数]]></title>
+    <url>%2F2019%2F05%2F26%2F%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95%E7%B3%BB%E5%88%97%E4%B9%8B%E6%89%BE%E5%AE%8C%E6%95%B0%2F</url>
+    <content type="text"><![CDATA[问题一个数如果恰好等于它的因子之和，这个数就称为“完数”。例如6=1＋2＋3.编程找出1000以内的所有完数 代码123456789101112131415161718192021222324#include &lt;stdio.h&gt;int main() &#123; static int k[10]; int i,j,n,s; for(j=2;j&lt;1000;j++) &#123; n=-1; s=j; for(i=1;i &#123; if((j%i)==0) &#123; n++; s=s-i; k[n]=i; &#125; &#125; if(s==0) &#123; printf(“%d is a wanshu”,j); for(i=0;i printf(“%d,”,k); printf(“%d\n”,k[n]); &#125; &#125; &#125;]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[“经典算法系列之求累加值]]></title>
+    <url>%2F2019%2F05%2F25%2F%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95%E7%B3%BB%E5%88%97%E4%B9%8B%E6%B1%82%E7%B4%AF%E5%8A%A0%E5%80%BC%2F</url>
+    <content type="text"><![CDATA[问题求s=a+aa+aaa+aaaa+aa…a的值，其中a是一个数字。例如 2+22+222+2222+22222(此时共有5个数相加)，几个数相加有键盘控制。 方法计算出每一项的值。 代码12345678910111213141516int main() &#123; int a,n,count=1; long int sn=0,tn=0; printf(“please input a and n\n”); scanf(“%d,%d”,&amp;a,&amp;n); printf(“a=%d,n=%d\n”,a,n); while(count&lt;=n) &#123; tn=tn+a; sn=sn+tn; a=a*10; ++count; &#125; printf(“a+aa+…=%ld\n”,sn); &#125;]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[“经典算法系列之统计字符个数]]></title>
+    <url>%2F2019%2F05%2F24%2F%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95%E7%B3%BB%E5%88%97%E4%B9%8B%E7%BB%9F%E8%AE%A1%E5%AD%97%E7%AC%A6%E4%B8%AA%E6%95%B0%2F</url>
+    <content type="text"><![CDATA[问题输入一行字符，分别统计出其中英文字母、空格、数字和其它字符的个数。 方法利用while语句,条件为输入的字符不为’\n’ 代码123456789101112131415161718include “stdio.h”main() &#123; char c; int letters=0,space=0,digit=0,others=0; printf(“please input some characters\n”); while((c=getchar())!=’\n’) &#123; if(c&gt;=’a’&amp;&amp;c&lt;=’z’||c&gt;=’A’&amp;&amp;c&lt;=’Z’) letters++; else if(c==’ ‘) space++; else if(c&gt;=’0’&amp;&amp;c&lt;=’9’) digit++; else others++; &#125; printf(“all in all:char=%d space=%d digit=%d others=%d\n”,letters,space,digit,others); &#125;]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[经典算法系列之最大公约数和最小公倍数]]></title>
+    <url>%2F2019%2F05%2F23%2F%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95%E7%B3%BB%E5%88%97%E4%B9%8B%E6%9C%80%E5%A4%A7%E5%85%AC%E7%BA%A6%E6%95%B0%E5%92%8C%E6%9C%80%E5%B0%8F%E5%85%AC%E5%80%8D%E6%95%B0%2F</url>
+    <content type="text"><![CDATA[问题输入两个正整数m和n，求其最大公约数和最小公倍数。 方法辗除法。 代码12345678910111213141516171819main() &#123; int a,b,num1,num2,temp; printf(“please input two numbers:\n”); scanf(“%d,%d”,&amp;num1,&amp;num2); if(num1 &#123; temp=num1; num1=num2; num2=temp; &#125; a=num1;b=num2; while(b!=0)/利用辗除法，直到b为0为止/ &#123; temp=a%b; a=b; b=temp; &#125; printf(“gongyueshu:%d\n”,a); printf(“gongbeishu:%d\n”,num1*num2/a); &#125;]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[经典算法系列之正整数分解质因数]]></title>
     <url>%2F2019%2F05%2F22%2F%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95%E7%B3%BB%E5%88%97%E4%B9%8B%E6%AD%A3%E6%95%B4%E6%95%B0%E5%88%86%E8%A7%A3%E8%B4%A8%E5%9B%A0%E6%95%B0%2F</url>
     <content type="text"><![CDATA[问题将一个正整数分解质因数。例如：输入90,打印出90 = 2 3 3 * 5。 方法程序分析：对n进行分解质因数，应先找到一个最小的质数k，如果这个质数恰等于n，则说明分解质因数的过程已经结束，打印出即可。如果n&lt;&gt;k，但n能被k整除，则应打印出k的值，并用n除以k的商,作为新的正整数你n,重复执行第一步。如果n不能被k整除，则用k+1作为k的值,重复执行第一步。 代码123456789101112131415161718192021#include &lt;stdio.h&gt;int main()&#123;int n,i;printf(&quot;\nplease input a number:\n&quot;);scanf(&quot;%d&quot;,&amp;n);printf(&quot;%d=&quot;,n);for(i=2;i&lt;=n;i++) &#123; while(n!=i) &#123; if(n%i==0) &#123; printf(&quot;%d*&quot;,i); n=n/i; &#125; else break; &#125;&#125;printf(&quot;%d&quot;,n);&#125;]]></content>
